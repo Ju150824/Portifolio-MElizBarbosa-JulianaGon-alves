@@ -1,0 +1,503 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: hsl(0, 30%, 55%);
+    color: white;
+}
+
+/* TÍTULO */
+header h1 {
+    font-size: 100px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    margin-top: 20px;
+}
+
+/* FOTOS LADO A LADO */
+.fotos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+    flex-wrap: wrap; 
+}
+
+/* CADA PESSOA */
+.perfil img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.perfil p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.perfil a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.perfil a:hover {
+    text-decoration: underline;
+}
+/* BOTÕES */
+.botoes {
+    margin-top: 40px;
+}
+
+.botoes a {
+    background: white;
+    color: black;
+    padding: 12px 25px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 25px;
+    display: inline-block;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.botoes a:hover {
+    background: rgb(85, 5, 5);
+    color: white;
+}
+/* MENU HAMBÚRGUER */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+/* MENU ESCONDIDO */
+#menu {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background: rgb(71, 35, 35);
+    padding-top: 60px;
+    transition: 0.3s;
+}
+
+/* LINKS */
+#menu a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    background: #333;
+}
+
+/* MENU ATIVO */
+#menu.ativo {
+    left: 0;
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+
+    .fotos {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .botoes a {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .perfil img {
+        width: 180px;
+        height: 180px;
+    }
+
+    header h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-sobre {
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .foto-sobre {
+        width: 130px;
+        height: 130px;
+    }
+
+    .card-sobre h2 {
+        font-size: 26px;
+    }
+
+    .habilidades-container {
+     flex-direction: column;
+      align-items: center;
+}
+
+    .card-habilidades {
+      width: 90%;
+}
+
+    .card-habilidades h2 {
+        font-size: 26px;
+}
+
+    .card-habilidades h3 {
+         font-size: 20px;
+}
+    .cursos-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+    .card-cursos {
+        width: 90%;
+}
+
+    .card-cursos h2 {
+        font-size: 26px;
+}
+
+    .curso-item h3 {
+        font-size: 20px;
+}
+    .card-contato {
+        width: 90%;
+        padding: 20px;
+}
+
+    .card-contato h2 {
+        font-size: 28px;
+}
+
+    .texto-contato {
+        font-size: 16px;
+}
+}
+
+
+
+
+
+/*CONTINUANDO NO GERALZÃO*/
+
+.descricao {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #f0f0f0;
+}
+
+.frase-geral {
+    margin-top: 30px;
+    font-size: 18px;
+    padding: 0 20px;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 16px;
+}
+
+
+/* HABILIDADES */
+.habilidades-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.card-habilidades {
+    background: rgba(255, 255, 255, 0.15);
+    width: 420px;
+    max-width: 90%;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+.card-habilidades h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.card-habilidades h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.card-habilidades p {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+/* BARRAS */
+.barra {
+    width: 100%;
+    height: 18px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.progresso {
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+}
+
+/* NÍVEIS */
+.html {
+    width: 85%;
+}
+
+.css {
+    width: 80%;
+}
+
+.js {
+    width: 65%;
+}
+
+.bd {
+    width: 65%;
+}
+
+.frontend {
+    width: 70%;
+}
+
+.bd2 {
+    width: 50%;
+}
+
+.embarcados {
+    width: 75%;
+}
+
+/* TAGS */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tags span {
+    background: white;
+    color: black;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* SOBRE NÓS */
+.sobre-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.card-sobre {
+    background: rgba(255, 255, 255, 0.15);
+    flex: 1 1 300px;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.foto-sobre {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card-sobre h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.card-sobre p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* CURSOS */
+.cursos-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.card-cursos {
+    background: rgba(255, 255, 255, 0.15);
+    width: 420px;
+    max-width: 90%;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+.card-cursos h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.curso-item {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.curso-item h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.curso-item p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.porcentagem {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* PROGRESSOS DOS CURSOS */
+.upe-maria {
+    width: 50%;
+}
+
+.upe-juliana {
+    width: 50%;
+}
+
+/* CONTATO */
+.contato-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.card-contato {
+    background: rgba(255, 255, 255, 0.15);
+    width: 500px;
+    max-width: 90%;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+.card-contato h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.texto-contato {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.card-contato label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.card-contato input,
+.card-contato textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.card-contato textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.card-contato button {
+    width: 100%;
+    background: white;
+    color: rgb(66, 9, 9);
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-contato button:hover {
+    background: rgb(136, 20, 20);
+    color: white;
+}
+
+#erro {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+#contador {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 15px;
+    text-align: right;
+}
